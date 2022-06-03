@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <title>Monolith Boss Bingo</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="bingo.css">
+  <head>
+	<script src="jquery-git.js"></script>
+  </head>
+  <body>
+    <div id="banner" style="margin-top:10px; margin-left:7px;">
+      <img id="banner1" src="./img/banner1.png" style="display:block"/>
+      <img id="banner2" src="./img/banner2.png" style="display:none"/>
+    </div>
+    
+    <div id="setup" class="setup">
+      <br>Grid Size:<br/>
+	  <div class="setupRow">
+		  <input id="oneRow" type="radio" name="gridSize">
+		  <label>1 x 1 (Why?)</label><br>
+	  </div>
+	  <div class="setupRow">
+		  <input id="threeRow" type="radio" name="gridSize">
+		  <label>3 x 3 (Medium)</label><br>
+	  </div>
+	  <div class="setupRow">
+		  <input id="fiveRow" type="radio" name="gridSize">
+		  <label>5 x 5 (Large)</label><br><br>
+	  </div>
+	  <div>
+		<button onclick="generateGrid()" id="startButton" class="button" type="submit" style="margin: auto;">Start</button>
+	  </div>
+	  <button id="useCode" class="button" type="submit" class="button" onclick="useCode()">Use Code</button>
+	  
+    </div>
+
+	<div id ="gridView" style="display:none;">
+		<div id="container">
+		</div>
+		
+		<div style="margin:auto; width:50%; text-align: center;">
+			<button id="reset" class="button" onclick="resetSetup()" type="submit">Reset
+			</button>
+		</div>
+		
+		<div style="margin:auto; margin-top: 10px; margin-bottom: 10px; width:50%; text-align: center;">
+			<button id="share" class="button" onclick="shareCard()" type="submit">Share
+			</button>
+		</div>
+	</div>
+	
+	<div>
+		<textarea id="codeBox" class="codeBox"></textarea>
+	</div>
+	
+	<div class="footer">
+		<label>Created by CCoolant</label></br>
+		<label>Microcore and ChaosGod portraits by Doom Man</label>
+	</div>
+	<script src="bingo.js"></script>
+  </body>
+</html>
